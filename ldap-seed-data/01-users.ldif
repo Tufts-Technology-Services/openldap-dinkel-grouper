@@ -1,0 +1,24 @@
+n: ou=People,dc=tufts,dc=edu
+objectclass: organizationalunit
+
+dn: ou=Groups,dc=tufts,dc=edu
+objectclass: organizationalunit
+
+dn: cn=admin-seed-data,dc=tufts,dc=edu
+objectClass: simpleSecurityObject
+objectClass: organizationalRole
+cn: admin-seed-data
+userPassword: password
+description: LDAP administrator
+
+dn: uid=jsmith,ou=People,dc=tufts,dc=edu
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+givenName: Joe
+uid: jsmith
+sn: Smith
+cn: John Smith
+userPassword: password
