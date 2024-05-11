@@ -1,4 +1,4 @@
-n: ou=People,dc=tufts,dc=edu
+dn: ou=People,dc=tufts,dc=edu
 objectclass: organizationalunit
 
 dn: ou=Groups,dc=tufts,dc=edu
