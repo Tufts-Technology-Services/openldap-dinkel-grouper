@@ -15,7 +15,7 @@ wget https://raw.githubusercontent.com/Tufts-Technology-Services/openldap-dinkel
 wget https://raw.githubusercontent.com/Tufts-Technology-Services/openldap-dinkel-grouper/01-ldap-T/grouper-loader.properties
 docker build -t openldap-dinkel-grouper .
 docker run -d -p 389:389 --name openldap-dinkel-grouper --mount type=bind,source="$PWD/ldap-seed-data",target=/etc/ldap/prepopulate \
-   -e SLAPD_PASSWORD=secret -e SLAPD_CONFIG_PASSWORD=secret -e SLAPD_DO01-ldap-T=tufts.edu openldap-dinkel-grouper
+   -e SLAPD_PASSWORD=secret -e SLAPD_CONFIG_PASSWORD=secret -e SLAPD_DOMAIN=tufts.edu openldap-dinkel-grouper
 
 # wget https://raw.githubusercontent.com/Tufts-Technology-Services/openldap-dinkel-grouper/01-ldap-T/downloadAndRunLdap.sh
 # chmod +x downloadAndRunLdap.sh
