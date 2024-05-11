@@ -22,3 +22,22 @@ uid: jsmith
 sn: Smith
 cn: John Smith
 userPassword: password
+
+dn: uid=banderson,ou=People,dc=tufts,dc=edu
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+givenName: Bob
+uid: banderson
+sn: Anderson
+cn: Bob Anderson
+userPassword: password
+
+dn: cn=users,ou=Groups,dc=tufts,dc=edu
+objectClass: groupOfUniqueNames
+objectClass: top
+uniqueMember: uid=banderson,ou=People,dc=tufts,dc=edu
+uniqueMember: uid=jsmith,ou=People,dc=tufts,dc=edu
+cn: users
