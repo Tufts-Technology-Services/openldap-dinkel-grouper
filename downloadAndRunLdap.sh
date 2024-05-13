@@ -2,7 +2,7 @@
 
 mkdir ldap-seed-data
 cd ldap-seed-data
-wget https://raw.githubusercontent.com/Tufts-Technology-Services/openldap-dinkel-grouper/01-ldap-T/ldap-seed-data/01-users.ldif
+wget https://raw.githubusercontent.com/Tufts-Technology-Services/openldap-dinkel-grouper/01-ldap-T/ldap-seed-data/02-users.ldif
 #wget https://raw.githubusercontent.com/Tufts-Technology-Services/openldap-dinkel-grouper/01-ldap-T/ldap-seed-data/03-more-users.ldif
 wget https://raw.githubusercontent.com/Tufts-Technology-Services/openldap-dinkel-grouper/01-ldap-T/ldap-seed-data/03-redirect.ldif
 cd ..
