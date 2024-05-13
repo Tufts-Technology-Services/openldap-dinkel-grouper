@@ -1,5 +1,5 @@
-dn: dc=example,dc=edu
-dc: example
+dn: dc=tufts,dc=edu
+dc: tufts
 description: LDAP Admin
 objectClass: dcObject
 objectClass: organizationalUnit
