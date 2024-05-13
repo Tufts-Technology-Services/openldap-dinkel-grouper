@@ -1,8 +1,8 @@
 #!/bin/bash
 
-cp /usr/share/openldap-servers/DB_CONFIG.example /var/lib/ldap/DB_CONFIG
+cp /usr/share/openldap-servers/DB_CONFIG.tufts /var/lib/ldap/DB_CONFIG
 
-mkdir -p /var/ldap/example
+mkdir -p /var/ldap/tufts
 
 chown -R ldap:ldap /var/lib/ldap /etc/openldap/slapd.d /var/ldap
 
@@ -22,13 +22,13 @@ ldapadd -H ldapi:/// -f /seed-data/memberOf.ldif
 
 ldapadd -H ldapi:/// -f /seed-data/eduPerson.ldif
 
-ldapadd -x -D cn=admin,dc=example,dc=edu -w secret -f /seed-data/domain2.ldif
+ldapadd -x -D cn=admin,dc=tufts,dc=edu -w secret -f /seed-data/domain2.ldif
 
-ldapadd -x -D cn=admin,dc=example,dc=edu -w secret -f /seed-data/02-users.ldif
+ldapadd -x -D cn=admin,dc=tufts,dc=edu -w secret -f /seed-data/02-users.ldif
 
-ldapadd -x -D cn=admin,dc=example,dc=edu -w secret -f /seed-data/03-more-users.ldif
+#ldapadd -x -D cn=admin,dc=tufts,dc=edu -w secret -f /seed-data/03-more-users.ldif
 
-ldapadd -x -D cn=admin,dc=example,dc=edu -w secret -f /seed-data/03-redirect.ldif
+ldapadd -x -D cn=admin,dc=tufts,dc=edu -w secret -f /seed-data/03-redirect.ldif
 
 pkill -HUP slapd
 
